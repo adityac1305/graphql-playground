@@ -13,8 +13,11 @@
 1. The ability to nest any related data into a single query instead of making multiple queries as we might do in REST API.  
    This overcomes the drawbacks of REST API.
 
+---
 
 ### Making Apollo Server
+
+---
 
 Refer to the official documentation:  
 https://www.apollographql.com/docs/apollo-server/getting-started
@@ -27,8 +30,11 @@ https://www.apollographql.com/docs/apollo-server/getting-started
 Further steps are as follows:  
 https://github.com/adityac1305/graphql-playground/tree/feature/create-apollo-server
 
+---
 
 ### Schema and types
+
+---
 
 We also use the extension of Graphql syntax highlighter in VS Code for:
 - Highlighting the schema syntax in template literals.
@@ -110,8 +116,11 @@ type Game {
 `type Query` is the root "read menu" of your GraphQL API — it defines all the ways clients can fetch data.
 
 
+---
 
 ### Resolver functions ###
+
+---
 
 **typeDefs**  
 - define the schema/blueprint of the GraphQL API (what data and operations exist).
@@ -121,7 +130,7 @@ type Game {
 - provide the logic/implementation that actually returns the data.
 - connect those queries/mutations to real data sources (DB, APIs, etc.).
 
----
+
 
 ### Installing nodemon
 
@@ -194,6 +203,8 @@ This is safe for development on your machine.
 
 ### Query Variables ###
 
+---
+
 How do we get single game, single review or single author?
 
 We add the following in `type Query` for returning single game with the passed id in argument in `schema.js`:
@@ -233,6 +244,8 @@ JavaScript lets you omit the parentheses when the arrow function has exactly one
 ---
 
 ### Related Data ###
+
+---
 
 Adding in `schema.js`:
 
@@ -277,7 +290,11 @@ Author: {
 }
 ```
 
+---
+
 ### Mutations-adding-deleting-data ###
+
+---
 
 **Mutation:**  
 Special root type in GraphQL for operations that change data (insert, update, delete).
@@ -299,7 +316,6 @@ input AddGameInput {
 **deleteGame(id: ID!): [Game]**  
 Takes an `id` and returns the list of remaining games after deletion.
 
----
 
 #### Using the spread operator
 
@@ -344,12 +360,16 @@ db.games.push(game);
 
 ### Mutations-updating-data ###
 
+---
+
 You can also update data using mutations.  
 For example, an `updateGame` mutation might take an `id` and an `edits` object, then update the matching game and return the updated game.
 
 ---
 
 ### Additional
+
+---
 
 **Object and Functions**
 
