@@ -382,3 +382,14 @@ The following are present in the schema.js file
 - **Mutation** → object  
   - `addGame(_, args)` → function (creates and returns a new game)
   - `deleteGame(_, args)` → function (deletes game, returns updated list)
+
+---
+
+## References
+
+---
+
+- https://www.youtube.com/watch?v=5199E50O7SI
+- https://github.com/iamshaunjp/graphql-crash-course/tree/lesson-9
+- https://www.apollographql.com/docs/apollo-server/getting-started
+- https://chatgpt.com/
