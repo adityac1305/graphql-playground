@@ -30,6 +30,29 @@ const resolvers = {
         author(_, args) {
             return db.authors.find((author) => author.id === args.id);
         }
+    },
+
+    // Resolvers for nested fields in GraphQL.
+
+    Game: {
+        reviews(parent) {
+            return db.reviews.filter((review) => review.game_id === parent.id);
+        }
+    },
+
+    Review: {
+        author(parent) {
+            return db.authors.find((author) => author.id === parent.author_id);
+        },
+        game(parent) {
+            return db.games.find((game) => game.id === parent.game_id);
+        }
+    },
+
+    Author: {
+        reviews(parent) {
+            return db.reviews.filter((review) => review.author_id === parent.id);
+        }
     }
 }
 
